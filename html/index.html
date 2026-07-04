@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>advanced · todo app</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1><i class="fas fa-list-check"></i> advanced todo</h1>
+      <p class="subhead">search · time · duplicate · delete · notifications</p>
+    </header>
+
+    <!-- main input & actions -->
+    <div class="input-area">
+      <div class="input-row">
+        <input type="text" id="todoInput" placeholder="write a task …" autofocus>
+        <button id="addBtn" class="btn primary"><i class="fas fa-plus"></i> add</button>
+      </div>
+      <div class="action-row">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="search tasks …">
+        </div>
+        <div class="stats">
+          <span id="taskCount">0 tasks</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- notification toast -->
+    <div id="notification" class="notification hidden">
+      <span id="notifMessage">notification</span>
+      <button id="notifClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- todo list -->
+    <ul id="todoList" class="todo-list"></ul>
+
+    <!-- footer with clear all & info -->
+    <div class="footer-actions">
+      <button id="clearAllBtn" class="btn danger"><i class="fas fa-trash-alt"></i> clear all</button>
+      <span class="footer-hint"><i class="far fa-clock"></i> each task stores creation time</span>
+    </div>
+  </div>
+
+  <!-- Separate JS file -->
+  <script src="../javascript/script.js"></script>
+</body>
+</html>
